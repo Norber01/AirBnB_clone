@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines the unit tests for console.py.
 
+
 Unittest classes:
     TestHBNBCommand_prompting
     TestHBNBCommand_help
@@ -19,6 +20,7 @@ from models.engine.file_storage import FileStorage
 from console import HBNBCommand
 from io import StringIO
 from unittest.mock import patch
+
 
 
 class TestHBNBCommand_prompting(unittest.TestCase):
@@ -105,6 +107,7 @@ class TestHBNBCommand_help(unittest.TestCase):
             self.assertEqual(h, output.getvalue().strip())
 
 
+
 class TestHBNBCommand_exit(unittest.TestCase):
     """Unit tests for the testing of 'exiting' frm the HBNB command interpreter."""
 
@@ -115,6 +118,7 @@ class TestHBNBCommand_exit(unittest.TestCase):
     def test_EOF_exits(self):
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertTrue(HBNBCommand().onecmd("EOF"))
+
 
 
 class TestHBNBCommand_create(unittest.TestCase):
