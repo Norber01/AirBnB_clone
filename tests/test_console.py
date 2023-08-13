@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Defines the unit tests for console.py.
-
+"""Define unittests for console.py.
 
 Unittest classes:
     TestHBNBCommand_prompting
@@ -22,9 +21,8 @@ from io import StringIO
 from unittest.mock import patch
 
 
-
 class TestHBNBCommand_prompting(unittest.TestCase):
-    """Unit tests for testing 'prompting' of the HBNB command interpreter."""
+    """Unit tests: for testing the 'prompting' of the HBNB command interpreter."""
 
     def test_prompt_string(self):
         self.assertEqual("(hbnb) ", HBNBCommand.prompt)
@@ -36,7 +34,7 @@ class TestHBNBCommand_prompting(unittest.TestCase):
 
 
 class TestHBNBCommand_help(unittest.TestCase):
-    """Unit tests for testing of 'help messages' of the HBNB command interpreter."""
+    """Unit tests: for testing the 'help' messages of the HBNB command interpreter."""
 
     def test_help_quit(self):
         h = "Quit command to exit the program."
@@ -107,9 +105,8 @@ class TestHBNBCommand_help(unittest.TestCase):
             self.assertEqual(h, output.getvalue().strip())
 
 
-
 class TestHBNBCommand_exit(unittest.TestCase):
-    """Unit tests for the testing of 'exiting' frm the HBNB command interpreter."""
+    """Unit tests: for testing the 'exiting' from HBNB command interpreter."""
 
     def test_quit_exits(self):
         with patch("sys.stdout", new=StringIO()) as output:
@@ -120,9 +117,8 @@ class TestHBNBCommand_exit(unittest.TestCase):
             self.assertTrue(HBNBCommand().onecmd("EOF"))
 
 
-
 class TestHBNBCommand_create(unittest.TestCase):
-    """Unit tests for the testing of 'create' from the HBNB command interpreter."""
+    """Unit tests: for testing the 'create' from the HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
@@ -204,7 +200,7 @@ class TestHBNBCommand_create(unittest.TestCase):
 
 
 class TestHBNBCommand_show(unittest.TestCase):
-    """Unit testz for testing show from the HBnB command interpreter"""
+    """Unit tests: for testing the 'show' from the HBNB command interpreter"""
 
     @classmethod
     def setUp(self):
@@ -457,7 +453,7 @@ class TestHBNBCommand_show(unittest.TestCase):
 
 
 class TestHBNBCommand_destroy(unittest.TestCase):
-    """Unit tests for testing of destroy from the HBNB command interprter."""
+    """Unit tests: for testing the 'destroy' from the HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
@@ -711,7 +707,7 @@ class TestHBNBCommand_destroy(unittest.TestCase):
 
 
 class TestHBNBCommand_all(unittest.TestCase):
-    """Unit tests for the testing of all the HBNB commnd interpreter."""
+    """Unit tests: for testing all the HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
@@ -857,7 +853,7 @@ class TestHBNBCommand_all(unittest.TestCase):
 
 
 class TestHBNBCommand_update(unittest.TestCase):
-    """Unit tests for the testing of update from the HBNB command interpreter."""
+    """Unit tests: for testing the 'update' from the HBNB command interpreter."""
 
     @classmethod
     def setUp(self):
@@ -1506,7 +1502,7 @@ class TestHBNBCommand_update(unittest.TestCase):
 
 
 class TestHBNBCommand_count(unittest.TestCase):
-    """Unit tests for the testing of 'count method' of HBNB comand interpreter."""
+    """Unit tests: for testing the 'count' method of HBNB comand interpreter."""
 
     @classmethod
     def setUp(self):
