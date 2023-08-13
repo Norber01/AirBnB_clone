@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
+"""Formulates the HBnB console."""
+
 import cmd
 import re
 from shlex import split
@@ -49,12 +50,13 @@ class HBNBCommand(cmd.Cmd):
         "Review"
     }
 
+
     def emptyline(self):
-        """Do nothing upon receiving an empty line."""
+        """Nothing should be upon receiving an empty line."""
         pass
 
     def default(self, arg):
-        """Default behavior for cmd module when input is invalid"""
+        """Default behavior for cmd module when the input is invalid"""
         argdict = {
             "all": self.do_all,
             "show": self.do_show,
@@ -82,6 +84,7 @@ class HBNBCommand(cmd.Cmd):
         """EOF signal to exit the program."""
         print("")
         return True
+
 
     def do_create(self, arg):
         """Usage: create <class>
@@ -156,6 +159,7 @@ class HBNBCommand(cmd.Cmd):
                 count += 1
         print(count)
 
+
     def do_update(self, arg):
         """Usage: update <class> <id> <attribute_name> <attribute_value> or
        <class>.update(<id>, <attribute_name>, <attribute_value>) or
@@ -204,6 +208,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     obj.__dict__[k] = v
         storage.save()
+
 
 
 if __name__ == "__main__":
